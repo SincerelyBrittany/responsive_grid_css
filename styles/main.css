@@ -65,7 +65,7 @@ body{
 .top-container{
     display: grid;
     grid-gap: 20px;
-    grid-template-areas: 
+    grid-template-areas:
     'showcase showcase top-box-a'
     'showcase showcase top-box-b'
     ;
@@ -85,19 +85,19 @@ body{
     justify-content: center;
     box-shadow: var(--shadow);
   }
-  
+
   .showcase h1 {
     font-size: 4rem;
     margin-bottom: 0;
     color: var(--light);
   }
-  
+
   .showcase p {
     font-size: 1.3rem;
     margin-top: 0;
     color: var(--light);
   }
-  
+
   /* Top Box */
 .top-box {
     background: var(--primary);
@@ -107,15 +107,15 @@ body{
     box-shadow: var(--shadow);
     padding: 1.5rem;
   }
-  
+
   .top-box .price {
     font-size: 2.5rem;
   }
-  
+
   .top-box-a {
     grid-area: top-box-a;
   }
-  
+
   .top-box-b {
     grid-area: top-box-b;
   }
@@ -126,14 +126,14 @@ body{
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
-  
+
   .box {
     background: var(--primary);
     text-align: center;
     padding: 1.5rem 2rem;
     box-shadow: var(--shadow);
   }
-  
+
   /* Info */
 .info {
     background: var(--primary);
@@ -150,7 +150,7 @@ body{
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
-  
+
   .portfolio img {
     width: 100%;
     box-shadow: var(--shadow);
@@ -165,7 +165,38 @@ footer {
     padding: 1rem;
   }
 
+  /* Media Queries */
+  @media (max-width: 700px) {
+    .top-container {
+      grid-template-areas:
+        'showcase showcase'
+        'top-box-a top-box-b';
+    }
 
+    .showcase h1 {
+      font-size: 2.5rem;
+    }
 
+    .main-nav ul {
+      grid-template-columns: 1fr;
+    }
 
+    .info {
+      grid-template-columns: 1fr;
+    }
 
+    .info .btn {
+      display: block;
+      text-align: center;
+      margin: auto;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .top-container {
+      grid-template-areas:
+        'showcase'
+        'top-box-a'
+        'top-box-b';
+    }
+  }
