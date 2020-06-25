@@ -156,6 +156,14 @@ body{
     box-shadow: var(--shadow);
   }
 
+  /* Footer */
+footer {
+    margin-top: 2rem;
+    background: var(--dark);
+    color: var(--light);
+    text-align: center;
+    padding: 1rem;
+  }
 
 
 
